@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="forms.css">
+	<title>Pick up form</title>
+</head>
+<body>
+	<form enctype="multipart/form-data" action="#" method="POST">
+		<h1>Pick-up your order at store </h1>
+		<fieldset>
+			<input type="radio" name="title" value="Mr." class="ind" id="mr">
+			<label for="mr">Mr.</label>
+
+			<input type="radio" name="title" value="Ms." class="ind" id="ms">
+			<label for="ms">Ms.</label>
+
+			<input type="radio" name="title" value="Mrs." class="ind" id="mrs">
+			<label for="mrs">Mrs.</label>
+
+			<label for="fname">First Name:</label>
+			<input type="text" name="fname" id="fname" placeholder="Alexa" required>
+
+			<label for="lname">Last Name:</label>
+			<input type="text" name="lname" id="lname" placeholder="Jones" required>
+
+			<label for="phone">Phone Number:</label>
+			<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+
+			<label for="oid">Order ID:</label>
+			<input type="text" name="oid" id="oid" pattern="OD[0-9]{9}" placeholder="OD123456789" required>
+
+			<label for="dob">Pick-up Date:</label>
+			<input type="date" name="dob" id="dob" required>
+
+			<label for="ptime">Pick-up Time:</label>
+			<select id="ptime" name="ptime" required>
+				 <option value="">Select pick-up time</option>
+				<option value="first">12:00-2:00 p.m.</option>
+				<option value="second">2:00-4:00 p.m.</option>
+				<option value="third">4:00-6:00p.m.</option>
+			</select>
+
+			<label for="desc">Remarks:</label>
+			<textarea name="desc" placeholder="Add a note to your order" id="desc" maxlength="250"></textarea>
+		
+
+			<div class="btn-group">
+				<input class="btn primary" type="submit" value="Confirm">
+				<input class="btn secondary" type="reset">
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>
